@@ -1,0 +1,99 @@
+.header {
+
+  &__inner {
+    display: flex;
+    height: 114px;
+    justify-content: space-between;
+    column-gap: 40px;
+
+    @include tablet {
+      height: 90px;
+    }
+
+    @include mobile {
+      height: 70px;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+
+  }
+
+  &__menu {
+    align-items: center;
+
+    @include mobile {
+      display: none;
+    }
+
+    &-list {
+      display: flex;
+      width: 332px;
+      height: 100%;
+    
+      & .is-current {
+        --indicatorWidth: 100%;
+      }
+
+    }
+
+    &-item {
+      height: inherit;
+      font-size: 16px;
+      flex-grow: var(--grow);
+    }
+
+    &-link {
+      --indicatorWidth: 0;
+
+      position: relative;
+      height: inherit;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+
+      @include hover {
+        color: var(--color-accent);
+        --indicatorWidth: 100%;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: var(--indicatorWidth);
+        height: 8px;
+        left: 50%;
+        top: 0;
+        translate: -50%;
+        background-color: var(--color-accent);
+        transition-duration: var(--transition-duration);
+      }
+    }
+  }
+
+  &__image {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 457px;
+    padding-inline: 20px;
+
+    &-button {
+      @include reset-button;
+      @include square(64px);
+      color: var(--color-light);
+
+      @include hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+}

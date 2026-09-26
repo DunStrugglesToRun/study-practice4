@@ -1,0 +1,58 @@
+body {
+  @include fluid-text(24, 18);
+
+  font-family: var(--font-family-base);
+  font-weight: 350;
+  line-height: 1;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
+
+h1, .h1 {
+  @include fluid-text(64, 48);
+}
+h2, .h2 {
+  @include fluid-text(48, 36);
+}
+h3, .h3 {
+  @include fluid-text(32, 28);
+}
+h4, .h4 {
+  @include fluid-text(24, 20);
+}
+
+.heading {
+  &-italic {
+    
+    &-spaced {
+      font-style: italic;
+      letter-spacing: 0.3em;
+      white-space: nowrap;
+
+      @include desktop {
+        font-size: 44px;
+      }
+
+      @include tablet {
+        font-size: 40px;
+      }
+    }
+  }
+}

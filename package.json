@@ -1,0 +1,36 @@
+{
+  "name": "study-practice3__local",
+  "version": "1.0.0",
+  "description": "> An scss introductory practice.",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass styles/style.scss:styles/style.css --no-source-map --silence-deprecation=import",
+    "sass": "sass --watch styles/style.scss:styles/style.css --no-source-map --silence-deprecation=import",
+    "postcss": "postcss styles/style.css --output styles/style.min.css --watch",
+    "dev": "npm run build && (npm run sass & npm run postcss)",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify-css": "css-minify -f styles/style.css -o styles"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "css": "^3.0.0",
+    "css-minify": "^2.1.0",
+    "cssnano": "^9.0.4",
+    "nano": "^11.0.7",
+    "postcss": "^8.5.28",
+    "postcss-cli": "^12.0.0",
+    "sass": "^1.105.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DunStrugglesToRun/study-practice4.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DunStrugglesToRun/study-practice4/issues"
+  },
+  "homepage": "https://github.com/DunStrugglesToRun/study-practice4#readme"
+}

@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+dist
+node_modules
+template.md
+# only works if the files appeared in the directory after the settings in this file

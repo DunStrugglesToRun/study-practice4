@@ -1,0 +1,38 @@
+.burger-button {
+  --stripHoverGap: 10px;
+
+  @include reset-button;
+  @include flex-center;
+
+  flex-direction: column;
+  row-gap: 3px;
+  aspect-ratio: 1.1;
+
+  @include mobile {
+    --stripHoverGap: 7px;
+  }
+
+  &__strip {
+    display: inline-flex;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-light);
+    transition-duration: var(--transition-duration);
+
+    @include tablet {
+      width: 30px;
+    }
+
+    @include mobile {
+      width: 25px;
+    }
+  }
+  
+  @include hover {
+    row-gap: var(--stripHoverGap);
+  
+    .burger-button__strip {
+      background-color: var(--color-accent);
+    }
+  }
+}

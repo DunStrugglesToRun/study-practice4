@@ -1,0 +1,53 @@
+.pagination-controls {
+  display: flex;
+  column-gap: 19px;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+
+  @include desktop {
+    @include tablet-above {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    &:last-child {
+      --paddingButtonNext: 25px;
+    }
+  }
+
+  &__button {
+    --moreProductsFontSize: 16px;
+
+    @include reset-button;
+
+    font-size: var(--moreProductsFontSize);
+    display: flex;
+    align-items: center;
+    column-gap: 0.5em;
+    height: 50px;
+    padding-left: var(--paddingButtonNext);
+    color: var(--color-ligth);
+
+    @include hover {
+      --moreProductsFontSize: 20px;
+      color: var(--color-accent);
+    }
+
+    @include tablet {
+      --moreProductsFontSize: 20px;
+    }
+
+    &-arrow {
+      @include square(2em);
+
+      @include desktop {
+        @include tablet-above{
+          order: 1;
+
+        }
+      }
+    }
+  }
+}

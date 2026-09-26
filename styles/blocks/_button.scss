@@ -1,0 +1,77 @@
+.button {
+  @include flex-center(true);
+
+  height: var(--button-height-big);
+  padding-inline: 24px;
+  font-size: 16px;
+  color: var(--color-light);
+  background-color: transparent;
+  border: var(--border);
+  border-radius: var(--border-radius-button-big);
+
+  @include hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  &--small {
+    height: var(--button-height-small);
+    border-radius: var(--border-radius-button-small);
+  }
+
+  &--submit {
+    height: var(--input-height);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    
+    @include hover {
+      color: var(--color-light);
+      background-color: var(--color-accent);
+    }
+  }
+
+  &-crimson {
+    background-color: var(--color-crimson);
+  }
+
+  &-purple {
+    background-color: var(--color-purple);
+  }
+  
+  &-blue {
+    background-color: var(--color-blue);
+  }
+  
+  &-dark {
+    background-color: var(--color-dark);
+  }
+  
+  &-red {
+    background-color: var(--color-red); 
+  }
+  
+  &-olive {
+    background-color: var(--color-olive);
+  }
+  
+  &-seagreen {
+    background-color: var(--color-seagreen);
+  }
+
+  &-inspect {
+    @include square(56px);
+    
+    position: absolute;
+    content: ''; 
+    border: none;
+    border-radius: 50%;
+    translate: -50% -50%;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 1);
+    background: var(--color-light) url('/images/icons/plus.svg') center no-repeat;
+
+    @include hover {
+      background-color: var(--color-accent);
+    }
+  }
+
+}

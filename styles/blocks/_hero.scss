@@ -1,0 +1,329 @@
+.hero {
+  --offerCurrentColumnGap: clamp(30px, 3vw, 90px);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    max-width: 1302px;
+    width: 100vw;
+    height: 384px;
+    top: 60px;
+    left: 30px;
+    background: url('/images/patterns/hero-bg-text.svg') top/contain no-repeat;
+    z-index: -100;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    max-width: 1479px;
+    width: 100vw;
+    height: 705px;
+    top: -90px;
+    background: url('/images/patterns/hero-bg.svg') top/contain no-repeat;
+    z-index: -100;
+
+    @include desktop {
+      top: -65px;
+    }
+
+    @include mobile {
+      top: -20px;
+    }
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+
+    @include desktop {
+      row-gap: 50px;
+    }
+
+    @include tablet {
+      row-gap: 30px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 1588px;
+      height: 157px;
+      translate: -50%;
+      bottom: -108px;
+      left: 50%;
+      background: url('/images/banner/Labels.svg') center no-repeat;
+      pointer-events: none;
+    }
+  }
+
+  &__offer-current {
+    display: flex;
+    column-gap: var(--offerCurrentColumnGap);
+
+    @include desktop {
+      flex-direction: column;
+      row-gap: 80px;
+      align-items: center;
+      padding-inline: 30px
+    }
+  }
+  
+  &__colors {
+    position: relative;
+    width: 138px;
+    height: 480px;
+    list-style: none;
+    background: url('/images/patterns/colors-curve.svg') center/contain no-repeat;
+
+    @include tablet {
+      width: 0;
+      background: none;
+      z-index: 100;
+    }
+
+    
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      column-gap: 3%;
+      order: 1;
+    }
+  
+    
+    &-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      offset-path: path("M 0 0 Q 275.3 240 0 480");
+      offset-distance: calc(var(--i) / var(--n) * 100%);
+      offset-rotate: 0deg;
+      offset-anchor: center;
+
+      @include tablet {
+        offset-path: path("M 0 0 Q -80 240 0 480");
+      }
+
+      @include mobile {
+        position: static;
+        offset-path: none;
+      }
+    }
+    
+    &-button {
+      --buttonWidthTransformScale: 1;
+      --buttonBoxShadow: inset 0 0 0 1px var(--color-light);
+      
+      @include reset-button;
+      @include square(50px);
+      
+      justify-content: center;
+      align-items: center;
+
+      @include tablet {
+        --buttonWidthTransformScale: 2.5;
+        --buttonBoxShadow: inset 0 0 0 2px var(--color-light);
+      }
+      
+      &-visual {
+        @include square(16px);
+        
+        display: inline-flex;
+        border-radius: 50%;
+        box-shadow: var(--buttonBoxShadow);
+        transform: scale(var(--buttonWidthTransformScale));
+        transition-duration: var(--transition-duration);
+      }
+      
+      @include hover {
+        --buttonWidthTransformScale: 1.5;
+        --buttonBoxShadow: inset 0 0 0 3px var(--color-light);
+      }
+      
+      &.is-current {
+        --buttonWidthTransformScale: 1.5;
+        --buttonBoxShadow: inset 0 0 0 3px var(--color-light);
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__preview-wrapper {
+    display: flex;
+    column-gap: var(--offerCurrentColumnGap);
+
+    @include tablet {
+      @include mobile-above {
+        padding-left: 90px;
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+
+  &__preview {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-top: 50px;
+
+    @include tablet {
+      margin-right: 0;
+    }
+
+    &-lacing {
+      top: 40%; 
+      left: 39%;
+    }
+
+    &-sole {
+      top: 57%;
+      right: 1%;
+    }
+
+    &-image {
+      @include mobile {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-rotate {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      &--line {
+        @include mobile {
+          width: 100%;
+          height: auto;
+        }
+      }
+      
+      &--button {
+        @include reset-button;
+
+        color: var(--color-light);
+
+        @include hover {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+
+  &__offer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    row-gap: 32px;
+
+    @include desktop {
+      flex-grow: 1;
+    }
+
+    @include tablet {
+      align-items: stretch;
+      row-gap: 20px;
+    }
+  }
+
+  &__add-to-shopbag {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    font-weight: 500;
+
+    &__button {
+      @include reset-button;
+      @include square(32px);
+      
+      display: flex;
+      flex-shrink: 0;
+      color: var(--color-light);
+      align-items: center;
+      justify-content: center;
+
+      @include hover {
+        color: var(--color-accent);
+      }
+    }
+
+    &__price {
+      margin-right: clamp(20%, 10vw, 70%);
+    }
+
+    &__size {
+      --sizeDropdownRotate: 0;
+
+      &-label {
+        cursor: default;
+        font-size: 16px;
+        font-weight: 350;
+      }
+
+      &[open] {
+        --sizeDropdownRotate: 180deg;
+      }
+
+      &-default {
+        position: relative;
+        display: flex;
+        list-style: none;
+        cursor: pointer;
+
+        &::after {
+          content: '';
+          width: 32px;
+          height: 32px;
+          rotate: var(--sizeDropdownRotate);
+          background: url('/images/icons/arrow-drop-down.svg') top/contain no-repeat;
+        }
+      }
+
+      &-list {
+        position: absolute;
+      }
+
+      &-select {
+        @include reset-button; 
+
+        color: var(--color-ligth);
+        border-radius: var(--border-radius);
+
+        @include hover {
+          background-color: var(--color-accent);
+        }
+      }
+    }
+  }
+
+  &__details {
+    column-gap: 8px;
+  }
+
+  &__offer-options {
+    display: flex;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+
+      row-gap: 50px;
+    }
+  }
+
+  
+}
