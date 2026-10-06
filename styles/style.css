@@ -296,6 +296,10 @@ svg * {
   }
 }
 
+.overflow-x__hidden {
+  overflow-x: hidden;
+}
+
 body {
   font-size: clamp(18px, 24 / 1440 * 100 * 1vw, 24px);
   font-family: var(--font-family-base);
@@ -323,7 +327,7 @@ h1, h2, h3, h4 {
 }
 
 h1, .h1 {
-  font-size: clamp(48px, 64 / 1440 * 100 * 1vw, 64px);
+  font-size: clamp(44px, 64 / 1440 * 100 * 1vw, 64px);
 }
 
 h2, .h2 {
@@ -1142,4 +1146,187 @@ h4, .h4 {
   font-family: "Futura LT", sans-serif;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.essence {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 188px 52px;
+  row-gap: 70px;
+  text-align: center;
+}
+@media (max-width: 1023px) {
+  .essence {
+    padding: 120px 100px 0;
+  }
+}
+@media (max-width: 767px) {
+  .essence {
+    padding-inline: 70px;
+  }
+}
+.essence__header {
+  --essenceHeaderImageWidth: 1.1em;
+  position: relative;
+  line-height: 1.56;
+}
+.essence__header::before {
+  width: var(--essenceHeaderImageWidth);
+  aspect-ratio: 1;
+  position: absolute;
+  content: "";
+  top: 0.4em;
+  right: -0.3em;
+  background: url("/images/essence-header1.jpg") center/contain no-repeat;
+}
+.essence__header-image {
+  width: var(--essenceHeaderImageWidth);
+  aspect-ratio: 1;
+  display: inline;
+  align-self: center;
+}
+.essence__header-decorated {
+  background-image: linear-gradient(12deg, var(--color-light) 0%, var(--color-light) 63%, var(--color-accent) 63.9%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@media (max-width: 767px) {
+  .essence__header {
+    font-size: clamp(34px, 48 / 1440 * 100 * 1vw, 48px);
+  }
+}
+.essence__paragraph {
+  font-size: 16px;
+  line-height: 3;
+}
+@media (max-width: 767px) {
+  .essence__paragraph {
+    line-height: 2;
+  }
+}
+.essence__red-shoe {
+  position: absolute;
+  width: 57%;
+  height: auto;
+  left: -23%;
+  bottom: -30%;
+  z-index: -50;
+}
+@media (max-width: 1280px) {
+  .essence__red-shoe {
+    bottom: -10%;
+  }
+}
+@media (max-width: 1023px) {
+  .essence__red-shoe {
+    bottom: 6%;
+  }
+}
+.essence__page-bg-line {
+  position: absolute;
+  width: 43%;
+  aspect-ratio: 0.1;
+  left: -10%;
+  top: 30%;
+  z-index: -100;
+}
+@media (max-width: 1280px) {
+  .essence__page-bg-line {
+    top: -20%;
+  }
+}
+@media (max-width: 1023px) {
+  .essence__page-bg-line {
+    top: -70%;
+  }
+}
+@media (max-width: 767px) {
+  .essence__page-bg-line {
+    top: -140%;
+  }
+}
+
+.best-sellers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 100px;
+}
+@media (max-width: 1023px) {
+  .best-sellers {
+    row-gap: 60px;
+  }
+}
+.best-sellers__header-decorated {
+  background-image: linear-gradient(12deg, var(--color-light) 0%, var(--color-light) 36%, var(--color-accent) 36.9%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.best-sellers__gallery {
+  display: flex;
+  width: 100%;
+  column-gap: 16px;
+  justify-content: center;
+}
+@media (max-width: 1023px) {
+  .best-sellers__gallery {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+  }
+}
+.best-sellers__gallery-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  width: clamp(100px, 28vw, 416px);
+  aspect-ratio: 0.74;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding: 8px 8px;
+  color: var(--color-light);
+  overflow: hidden;
+}
+@media (max-width: 1023px) {
+  .best-sellers__gallery-button {
+    width: 400px;
+    aspect-ratio: 1.4;
+  }
+}
+@media (hover: hover) {
+  .best-sellers__gallery-button:hover {
+    --opacityBefore: 1;
+  }
+}
+@media (hover: none) {
+  .best-sellers__gallery-button:active {
+    --opacityBefore: 1;
+  }
+}
+.best-sellers__gallery-button ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.01), rgba(255, 0, 0, 0.1));
+  opacity: var(--opacityBefore, 0);
+  transition-duration: var(--transition-duration);
+  z-index: -50;
+}
+.best-sellers__gallery-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -100;
+}
+.best-sellers__gallery-label {
+  height: 64px;
 }

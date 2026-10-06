@@ -1,0 +1,108 @@
+.essence {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 188px 52px;
+  row-gap: 70px;
+  text-align: center;
+  
+  @include tablet {
+    padding: 120px 100px 0;
+  }
+
+  @include mobile {
+    padding-inline: 70px;
+  }
+  
+  &__header {
+    --essenceHeaderImageWidth: 1.1em;
+    
+    position: relative;
+    line-height: 1.56;
+    
+    &::before {
+      @include square(var(--essenceHeaderImageWidth));
+      
+      position: absolute;
+      content: '';
+      top: 0.4em;
+      right: -0.3em;
+      background: url('/images/essence-header1.jpg') center / contain no-repeat;
+      
+    }
+    
+    &-image {
+      @include square(var(--essenceHeaderImageWidth));
+      
+      display: inline;
+      align-self: center;
+    }
+    
+    &-decorated {
+      background-image: linear-gradient(
+        12deg,
+      var(--color-light) 0%,
+      var(--color-light) 63%,
+      var(--color-accent) 63.9%,
+      var(--color-accent) 100%,);
+      
+      -webkit-background-clip: text;
+      background-clip: text;
+      
+      color: transparent;
+    }
+
+    @include mobile {
+      @include fluid-text(48, 34);
+    }
+  }
+
+  &__paragraph {
+
+    font-size: 16px;
+    line-height: 3;
+
+    @include mobile {
+      line-height: 2;
+    }
+  }
+
+  &__red-shoe {
+    position: absolute;
+    width: 57%;
+    height: auto;
+    left: -23%;
+    bottom: -30%;
+    z-index: -50;
+
+    @include desktop {
+      bottom: -10%;
+    }
+
+    @include tablet {
+      bottom: 6%;
+    }
+  }
+
+  &__page-bg-line {
+    position: absolute;
+    width: 43%;
+    aspect-ratio: 0.1;
+    left: -10%;
+    top: 30%;
+    z-index: -100;
+
+    @include desktop {
+      top: -20%;
+    }
+
+    @include tablet {
+      top: -70%;
+    }
+
+    @include mobile {
+      top: -140%;
+    }
+  }
+}
