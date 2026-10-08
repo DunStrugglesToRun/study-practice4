@@ -1,0 +1,88 @@
+.display-products {
+
+  width: 100%;
+  gap: 47px;
+  grid-template-areas: 
+  "item1 item2 ."
+  ". item3 item4"
+  "item5 item6 .";
+
+  @include desktop {
+    grid-template-areas:
+    "item1 item2"
+    "item3 item4"
+    "item5 item6";
+    width: 80%;
+    row-gap: 80px;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    row-gap: 30px;
+    align-items: center;
+  }
+
+  @for $i from 1 through 6 {
+    > *:nth-child(#{$i}) {
+      grid-area: item#{$i};
+    }
+  }
+
+  &__item {
+  }
+
+  &__button {
+    --sportsTimeProductImageWidth: 78%;
+    --sportsTimeProductImageBottomPush: 23%;
+
+    @include reset-button;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    row-gap: 6%;
+    width: 100%;
+    aspect-ratio: 1.5;
+    align-items:center;
+
+    color: var(--color-light);
+
+    @include hover {
+    --sportsTimeProductImageWidth: 86%;
+    --sportsTimeProductImageBottomPush: 20%;
+     
+      color: var(--color-accent);
+    }
+
+    &::before {
+      // position: absolute;
+      content: '';
+      width: 100%;
+      aspect-ratio: 6.5;
+      background: url('/images/sports-time/desk.png') no-repeat center / contain;
+    }
+
+    @include tablet {
+      width: 50vw;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    display: flex;
+    align-items: end;
+    bottom: var(--sportsTimeProductImageBottomPush, 30%);
+    width: var(--sportsTimeProductImageWidth, 78%);
+    aspect-ratio: 1.6;
+    transition-duration: var(--transition-duration);
+  }
+
+  &__image {
+    // position: absolute;
+    width: 100%;
+    object-fit: cover;
+  }
+}

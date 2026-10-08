@@ -1,0 +1,53 @@
+.sports-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 120px;
+
+  @include desktop {
+    row-gap: 80px;
+  }
+
+  @include tablet {
+    row-gap: 0;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    row-gap: -0.4em;
+    font-weight: 950;
+    font-style: italic;
+    transform: rotate(-11deg);
+    width: 4.13em;
+    padding-block: 40px;
+
+    @include fluid-text(96, 59);
+    
+    &__pattern-white {
+      display: inline-block;
+      margin-bottom: -0.38em;
+      background-image: 
+      url('/images/sports-time/text-bg1.svg');
+      background-color: var(--color-light);
+      background-position: -0.7em -0.49em;
+      background-repeat: no-repeat;
+      background-size: 63% auto;
+      
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    &__empty-outline {
+      color: transparent;
+      -webkit-text-stroke: 1px var(--color-light);
+      align-self: end;
+    }
+  }
+
+  &__button {
+    @include tablet {
+      margin-top: 80px;
+    }
+  }
+}
