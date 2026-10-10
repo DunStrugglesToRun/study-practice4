@@ -39,6 +39,10 @@
     }
   }
 
+  &__statement {
+    max-width: 522px;
+  }
+
   &__points {
     display: flex;
     flex-direction: column;
