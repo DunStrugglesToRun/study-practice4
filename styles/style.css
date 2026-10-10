@@ -1685,3 +1685,20 @@ h4, .h4 {
     top: 30%;
   }
 }
+
+.sponsors::-webkit-scrollbar {
+  display: none;
+}
+.sponsors {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 30px;
+  padding-block: 10px;
+  overflow: scroll;
+}
+.sponsors svg {
+  flex-shrink: 0;
+}

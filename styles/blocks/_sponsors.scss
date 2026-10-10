@@ -1,0 +1,15 @@
+.sponsors {
+@include no-scrollbar;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 30px;
+  padding-block: 10px;
+  overflow: scroll;
+  
+  & svg {
+    flex-shrink: 0;
+  }
+}
+
