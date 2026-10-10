@@ -1,0 +1,122 @@
+.styles {
+
+  &__header-accent {
+    position: relative;
+
+    &::after {
+      content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -16px; // adjust to place it where it sits in Figma
+        transform: translateX(-50%);
+        width: 140px;
+        height: 32px;
+        border-radius: 50%; // makes the glow elliptical
+        background: radial-gradient(ellipse at center,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(120, 120, 120, 0.3) 40%,
+            rgba(0, 0, 0, 0) 75%);
+        filter: blur(6px); // check Figma's Layer blur value and halve it
+        pointer-events: none;
+        z-index: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: end; 
+    column-gap: 80px;
+    mix-blend-mode: screen;
+    margin-top: 80px;
+    isolation: isolate;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    width: 313px;
+    height: 292px;
+  }
+
+  &__button {
+    --beforeWidth: 86%;
+    --beforeOffsetTop: 60%;
+    --beforeBlur: 90px;
+    --labelFontSize: 20px;
+    --imageOffsetRight: 34px;
+
+    @include reset-button;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    row-gap: 22px;
+    padding-top: 34px;
+    width: 100%;
+    height: 100%;
+    font-weight: 950;
+    font-style: italic;
+    color: var(--color-light);
+
+    &::before {
+      
+      @include abs-center;
+      
+      content: '';
+      position: absolute;
+      width: var(--beforeWidth);
+      aspect-ratio: 1;
+      // transform: translateX(-50%);
+      top: 60%;
+      left: 40%;
+    
+      background: var(--color-accent);
+      opacity: 0.6;
+    
+      pointer-events: none;
+      filter: blur(var(--beforeBlur));
+
+      mix-blend-mode: lighten;
+      z-index: -1;
+    }
+
+    @include hover {
+      --labelFontSize: 25px;
+      --imageOffsetRight: 50px;
+    }
+
+    
+    @include tablet {
+      --beforeOffsetTop: 40%;
+      --beforeBlur: 60px;
+    }
+    
+    @include mobile {
+      --beforeOffsetTop: 30%;
+      --beforeBlur: 70px;
+      --beforeWidth: 67%;
+    }
+  }
+
+  &__label {
+    font-size: var(--labelFontSize);
+    transition-duration: var(--transition-duration);
+  }
+
+  &__image {
+    position: absolute;
+    top: 25%;
+    right: var(--imageOffsetRight);
+    transition-duration: var(--transition-duration);
+    
+    @include mobile-above {
+      @include tablet {
+        top: 30%;
+      }
+    }
+  }
+}

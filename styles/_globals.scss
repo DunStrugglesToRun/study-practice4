@@ -38,6 +38,14 @@ h4, .h4 {
   @include fluid-text(24, 20);
 }
 
+.red {
+  color: var(--color-accent);
+}
+
+.thin {
+  font-weight: 300;
+}
+
 .heading {
   &-italic {
     
