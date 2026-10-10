@@ -28,7 +28,6 @@
 
   &__blob {
     $blob-size: 168%;
-    $blob-red: var(--color-accent);
 
     @include abs-center;
 

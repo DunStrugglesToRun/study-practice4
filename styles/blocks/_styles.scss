@@ -81,7 +81,7 @@
       filter: blur(var(--beforeBlur));
 
       mix-blend-mode: lighten;
-      z-index: -1;
+      z-index: -100;
     }
 
     @include hover {
