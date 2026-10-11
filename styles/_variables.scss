@@ -14,6 +14,7 @@
   --border-radius: 10px;
   --border-radius-button-small: 18px;
   --border-radius-button-big: 24px;
+  --border-radius-input: 28px;
 
   // --shadow: 0 5px 0 0 var(--color-dark);
 
@@ -33,9 +34,11 @@
 
   @include desktop {
     --section-padding-y: 50px;
+    --container-padding-x: 50px;
   }
 
   @include mobile {
     --section-padding-y: 30px;
+    --container-padding-x: 30px;
   }
 } 

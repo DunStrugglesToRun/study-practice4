@@ -23,6 +23,9 @@
     height: var(--input-height);
     color: var(--color-dark);
     background-color: var(--color-light);
+    border: none;
+    border-radius: var(--border-radius-input);
+    padding-inline: 40px;
     
     @include hover {
       color: var(--color-light);

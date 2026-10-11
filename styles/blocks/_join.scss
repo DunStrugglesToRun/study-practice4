@@ -5,7 +5,7 @@
   margin: 110px 120px 220px;
   padding: 65px 40px;
   border: var(--border);
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   
   @include tablet {
     margin-inline: 60px;

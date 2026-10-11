@@ -69,7 +69,7 @@
   &__picture {
     position: absolute;
     display: block; // <picture> is inline by default
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     overflow: hidden;
     
     &-1 {

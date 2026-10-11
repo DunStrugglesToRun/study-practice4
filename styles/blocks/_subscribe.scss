@@ -1,0 +1,15 @@
+.subscribe {
+  display: flex;
+  flex-direction: column;
+
+  &__form {
+    margin-block: 40px 88px;
+  }
+
+  &::after {
+    content: '';
+    width: 240px;
+    height: 125px;
+    background: url('/images/icons/footer/subscribe__logo.svg') center / contain no-repeat;
+  }
+}

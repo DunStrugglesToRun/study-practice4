@@ -30,4 +30,10 @@
       --gridColumns: 1;
     }
   }
+  
+  &--4 {
+    @include tablet {
+      --gridColumns: 2;
+    }
+  }
 }

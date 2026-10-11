@@ -1,0 +1,38 @@
+.features {
+  height: 160px;
+  font-size: 16px;
+  align-items: center;
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+
+    @include tablet {
+      &:nth-child(3),
+      &:nth-child(4) {
+        justify-self: end;
+      }
+      
+    }
+
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 11px;
+    }
+
+    &-header {
+      font-weight: 700;
+      font-size: 16px;
+      white-space: nowrap;
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+  }
+
+
+}
