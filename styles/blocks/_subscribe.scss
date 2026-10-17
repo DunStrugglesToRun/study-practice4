@@ -12,4 +12,8 @@
     height: 125px;
     background: url('/images/icons/footer/subscribe__logo.svg') center / contain no-repeat;
   }
+
+  @include tablet {
+    align-items: center;
+  }
 }

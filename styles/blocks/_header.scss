@@ -73,9 +73,21 @@
     }
   }
 
-  &__image {
+  &__homepage-link {
+    display: flex; 
+    align-items: center;
+    color: var(--color-light);
+
+    // & svg {
+    //   fill: currentColor;
+    // }
+
     @include tablet {
       display: none;
+    }
+
+    @include hover {
+      color: var(--color-accent);
     }
   }
 

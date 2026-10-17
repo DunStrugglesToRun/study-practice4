@@ -1,37 +1,44 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overflow-x__hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
+    <meta
+      name="description"
+      content="Discover top Nike styles, iconic sneakers, and exclusive athletic footwear at Adnan Nike. Shop high-performance running shoes, classic Dunks, and premium sportswear with fast shipping." />
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="" />
-    <meta name="theme-color" content="" />
+    <meta name="author" content="Adnan Nike" />
+    <meta name="theme-color" content="#000000" />
 
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
+    <meta property="og:title" content="Adnan Nike | Premium Sneaker Shop & Athletic Footwear" />
+    <meta
+      property="og:description"
+      content="Explore the latest Nike styles, performance running shoes, and street style icons. Upgrade your sneaker game with Adnan Nike." />
+    <meta property="og:image" content="/" />
+    <meta property="og:url" content="/" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="" />
+    <meta property="og:site_name" content="Adnan Nike" />
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:site" content="@" />
+    <meta name="twitter:title" content="Adnan Nike | Premium Sneaker Shop & Athletic Footwear" />
+    <meta
+      name="twitter:description"
+      content="Explore the latest Nike styles, performance running shoes, and street style icons. Upgrade your sneaker game with Adnan Nike." />
+    <meta name="twitter:image" content="/" />
+    <meta name="twitter:site" content="@AdnanNike" />
 
     <title>Adnan Nike</title>
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon-32x32.png" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
 
-    <link rel="preload" href="/images/hero/hero.avif" as="image" type="image/avif" fetchpriority="high" />
+    <link rel="preload" href="/images/banner/current.avif" as="image" type="image/avif" fetchpriority="high" />
     <link rel="preload" href="/fonts/.woff2" as="font" type="font/woff2" crossorigin />
 
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/style.min.css" />
   </head>
   <body class="overflow-x__hidden">
     <header class="header container">
@@ -59,7 +66,19 @@
             </ul>
           </nav>
         </div>
-        <img src="/images/icons/nike-logo.svg" width="80" height="32" alt="" class="header__image" />
+        <a href="/" class="header__homepage-link">
+          <svg
+            fill="currentColor"
+            width="100px"
+            height="100px"
+            viewBox="0 0 192.756 192.756"
+            xmlns="http://www.w3.org/2000/svg">
+            <g fill-rule="evenodd" clip-rule="evenodd">
+              <path
+                d="M42.741 71.477c-9.881 11.604-19.355 25.994-19.45 36.75-.037 4.047 1.255 7.58 4.354 10.256 4.46 3.854 9.374 5.213 14.264 5.221 7.146.01 14.242-2.873 19.798-5.096 9.357-3.742 112.79-48.659 112.79-48.659.998-.5.811-1.123-.438-.812-.504.126-112.603 30.505-112.603 30.505a24.771 24.771 0 0 1-6.524.934c-8.615.051-16.281-4.731-16.219-14.808.024-3.943 1.231-8.698 4.028-14.291z" />
+            </g>
+          </svg>
+        </a>
         <div class="header__actions">
           <button class="header__actions-button search-button" type="button" aria-label="Search">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,11 +129,12 @@
     </header>
 
     <main class="main" id="main">
+      <h1 class="visually-hidden">Welcome to Adnan Nike!</h1>
       <section class="section container">
         <div class="section__body">
           <div class="hero">
             <div class="hero__body">
-              <div class="hero__offer-current">
+              <div class="hero__offer-current" id="preview">
                 <div class="hero__preview-wrapper">
                   <ul class="hero__colors" style="--n: 6">
                     <li class="hero__colors-item" style="--i: 0">
@@ -155,10 +175,10 @@
                   </ul>
                   <div class="hero__preview">
                     <picture>
-                      <source srcset="/images/banner/current1.avif" type="image/avif" />
-                      <source srcset="/images/banner/current1.webp" type="image/webp" />
+                      <source srcset="/images/banner/current.avif" type="image/avif" />
+                      <source srcset="/images/banner/current.webp" type="image/webp" />
                       <img
-                        src="/images/banner/current1.png"
+                        src="/images/banner/current.png"
                         alt="Black body, white sole side, simplistic design, ankle height, white Nike logo and Air Jordan logo on the side."
                         class="hero__preview-image"
                         width="547"
@@ -210,7 +230,7 @@
                   </div>
                 </div>
                 <div class="hero__offer-info">
-                  <h2 class="heading-italic-spaced">
+                  <h2 class="heading-italic-spaced hero__offer-info__header">
                     AIR JORDAN 1 <br />
                     RETRO HIGH OG
                   </h2>
@@ -252,14 +272,14 @@
                       </svg>
                     </button>
                   </div>
-                  <button class="hero__details button button--small">
+                  <a href="/" class="hero__details button button--small">
                     More Details
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M16.8183 8.53942C16.7129 8.46055 16.5929 8.40326 16.4653 8.37085L9.57548 6.78021C9.447 6.75055 9.31394 6.74648 9.18389 6.76824C9.05384 6.79001 8.92934 6.83717 8.81752 6.90705C8.59168 7.04817 8.43116 7.27322 8.37125 7.53269C8.34159 7.66117 8.33752 7.79424 8.35929 7.92429C8.38105 8.05434 8.42822 8.17883 8.49809 8.29065C8.63921 8.51649 8.86426 8.67702 9.12374 8.73692L13.6657 9.77827L7.22905 13.8004C7.00413 13.9409 6.84426 14.165 6.78459 14.4235C6.72493 14.6819 6.77037 14.9534 6.91092 15.1783C7.05146 15.4032 7.27559 15.5631 7.53401 15.6228C7.79243 15.6824 8.06397 15.637 8.28888 15.4964L14.7256 11.4744L13.6704 16.0132C13.6402 16.1417 13.6357 16.2749 13.6573 16.4051C13.6788 16.5354 13.7259 16.6601 13.7958 16.772C13.8658 16.884 13.9572 16.981 14.0649 17.0574C14.1725 17.1339 14.2942 17.1882 14.4229 17.2174C14.5514 17.2476 14.6847 17.2521 14.8149 17.2306C14.9451 17.2091 15.0698 17.162 15.1818 17.092C15.2937 17.0221 15.3907 16.9306 15.4672 16.823C15.5436 16.7154 15.598 16.5937 15.6272 16.4649L17.2178 9.57508C17.2446 9.44618 17.2457 9.31326 17.221 9.18394C17.1768 8.92447 17.0321 8.69289 16.8183 8.53942Z"
                         fill="white" />
                     </svg>
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -370,14 +390,14 @@
             certainty that you will be able to wear them comfortably from the beginning. <br />
             Are you also curious to find out why hundreds of people choose us every day?
           </p>
-          <button class="button essence__button">
+          <a href="/" class="button essence__button">
             Find Out More
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M16.8183 8.53942C16.7129 8.46055 16.5929 8.40326 16.4653 8.37085L9.57548 6.78021C9.447 6.75055 9.31394 6.74648 9.18389 6.76824C9.05384 6.79001 8.92934 6.83717 8.81752 6.90705C8.59168 7.04817 8.43116 7.27322 8.37125 7.53269C8.34159 7.66117 8.33752 7.79424 8.35929 7.92429C8.38105 8.05434 8.42822 8.17883 8.49809 8.29065C8.63921 8.51649 8.86426 8.67702 9.12374 8.73692L13.6657 9.77827L7.22905 13.8004C7.00413 13.9409 6.84426 14.165 6.78459 14.4235C6.72493 14.6819 6.77037 14.9534 6.91092 15.1783C7.05146 15.4032 7.27559 15.5631 7.53401 15.6228C7.79243 15.6824 8.06397 15.637 8.28888 15.4964L14.7256 11.4744L13.6704 16.0132C13.6402 16.1417 13.6357 16.2749 13.6573 16.4051C13.6788 16.5354 13.7259 16.6601 13.7958 16.772C13.8658 16.884 13.9572 16.981 14.0649 17.0574C14.1725 17.1339 14.2942 17.1882 14.4229 17.2174C14.5514 17.2476 14.6847 17.2521 14.8149 17.2306C14.9451 17.2091 15.0698 17.162 15.1818 17.092C15.2937 17.0221 15.3907 16.9306 15.4672 16.823C15.5436 16.7154 15.598 16.5937 15.6272 16.4649L17.2178 9.57508C17.2446 9.44618 17.2457 9.31326 17.221 9.18394C17.1768 8.92447 17.0321 8.69289 16.8183 8.53942Z"
                 fill="white" />
             </svg>
-          </button>
+          </a>
           <picture>
             <source srcset="/images/essence-after.avif" type="image/avif" />
             <source srcset="/images/essence-after.webp" type="image/webp" />
@@ -437,7 +457,7 @@
           </h2>
           <ul class="best-sellers__gallery">
             <li class="best-sellers__gallery-item">
-              <button class="best-sellers__gallery-button">
+              <a href="/" class="best-sellers__gallery-button">
                 <picture>
                   <source srcset="/images/best-sellers/women.avif" type="image/avif" />
                   <source srcset="/images/best-sellers/women.webp" type="image/webp" />
@@ -477,10 +497,10 @@
                     mask="url(#path-1-outside-1_180_333)"
                     stroke="white" />
                 </svg>
-              </button>
+              </a>
             </li>
             <li class="best-sellers__gallery-item">
-              <button class="best-sellers__gallery-button">
+              <a href="/" class="best-sellers__gallery-button">
                 <picture>
                   <source srcset="/images/best-sellers/kids.avif" type="image/avif" />
                   <source srcset="/images/best-sellers/kids.webp" type="image/webp" />
@@ -520,10 +540,10 @@
                     mask="url(#path-1-outside-1_180_337)"
                     stroke="white" />
                 </svg>
-              </button>
+              </a>
             </li>
             <li class="best-sellers__gallery-item">
-              <button class="best-sellers__gallery-button">
+              <a href="/" class="best-sellers__gallery-button">
                 <picture>
                   <source srcset="/images/best-sellers/men.avif" type="image/avif" />
                   <source srcset="/images/best-sellers/men.webp" type="image/webp" />
@@ -559,7 +579,7 @@
                     fill="white"
                     mask="url(#path-1-outside-1_180_335)" />
                 </svg>
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -573,7 +593,7 @@
           </h2>
           <ul class="sports-time__grid grid grid--3 display-products">
             <li class="sports-time__grid__item display-products-item">
-              <button class="display-products__button">
+              <a href="#preview" class="display-products__button">
                 <picture class="display-products__picture">
                   <source srcset="/images/sports-time/am-plus-3.avif" type="image/avif" />
                   <source srcset="/images/sports-time/am-plus-3.webp" type="image/webp" />
@@ -586,11 +606,11 @@
                     loading="lazy" />
                 </picture>
                 <h3 class="display-products__label product-label">Nike Air Max Plus 3</h3>
-              </button>
+              </a>
             </li>
 
             <li class="sports-time__grid__item display-products-item">
-              <button class="display-products__button">
+              <a href="#preview" class="display-products__button">
                 <picture class="display-products__picture">
                   <source srcset="/images/sports-time/aj-4-retro-lightning.avif" type="image/avif" />
                   <source srcset="/images/sports-time/aj-4-retro-lightning.webp" type="image/webp" />
@@ -603,11 +623,11 @@
                     loading="lazy" />
                 </picture>
                 <h3 class="display-products__label product-label">Air Jordan 4 Retro Lightning (Premium Batch)</h3>
-              </button>
+              </a>
             </li>
 
             <li class="sports-time__grid__item display-products-item">
-              <button class="display-products__button">
+              <a href="#preview" class="display-products__button">
                 <picture class="display-products__picture">
                   <source srcset="/images/sports-time/aj-13-retro-court-purple.avif" type="image/avif" />
                   <source srcset="/images/sports-time/aj-13-retro-court-purple.webp" type="image/webp" />
@@ -620,11 +640,11 @@
                     loading="lazy" />
                 </picture>
                 <h3 class="display-products__label product-label">Air Jordan 13 Retro Court Purple (Reflective)</h3>
-              </button>
+              </a>
             </li>
 
             <li class="sports-time__grid__item display-products-item">
-              <button class="display-products__button">
+              <a href="#preview" class="display-products__button">
                 <picture class="display-products__picture">
                   <source srcset="/images/sports-time/aj-1-ajko-blue-red.avif" type="image/avif" />
                   <source srcset="/images/sports-time/aj-1-ajko-blue-red.webp" type="image/webp" />
@@ -637,11 +657,11 @@
                     loading="lazy" />
                 </picture>
                 <h3 class="display-products__label product-label">Air Jordan 1 AJKO Blue Red</h3>
-              </button>
+              </a>
             </li>
 
             <li class="sports-time__grid__item display-products-item">
-              <button class="display-products__button">
+              <a href="#preview" class="display-products__button">
                 <picture class="display-products__picture">
                   <source srcset="/images/sports-time/yeezy-boost-350-v2-mx-rock.avif" type="image/avif" />
                   <source srcset="/images/sports-time/yeezy-boost-350-v2-mx-rock.webp" type="image/webp" />
@@ -654,11 +674,11 @@
                     loading="lazy" />
                 </picture>
                 <h3 class="display-products__label product-label">Yeezy Boost 350 V2 MX Rock (Real Boost)</h3>
-              </button>
+              </a>
             </li>
 
             <li class="sports-time__grid__item display-products-item">
-              <button class="display-products__button">
+              <a href="#preview" class="display-products__button">
                 <picture class="display-products__picture">
                   <source srcset="/images/sports-time/vans-old-skool-suede-honey-gold.avif" type="image/avif" />
                   <source srcset="/images/sports-time/vans-old-skool-suede-honey-gold.webp" type="image/webp" />
@@ -671,17 +691,17 @@
                     loading="lazy" />
                 </picture>
                 <h3 class="display-products__label product-label">Vans Old Skool Suede Honey Gold</h3>
-              </button>
+              </a>
             </li>
           </ul>
-          <button class="button sports-time__button">
+          <a href="/" class="button sports-time__button">
             Let's Discover More
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M16.8183 8.53942C16.7129 8.46055 16.5929 8.40326 16.4653 8.37085L9.57548 6.78021C9.447 6.75055 9.31394 6.74648 9.18389 6.76824C9.05384 6.79001 8.92934 6.83717 8.81752 6.90705C8.59168 7.04817 8.43116 7.27322 8.37125 7.53269C8.34159 7.66117 8.33752 7.79424 8.35929 7.92429C8.38105 8.05434 8.42822 8.17883 8.49809 8.29065C8.63921 8.51649 8.86426 8.67702 9.12374 8.73692L13.6657 9.77827L7.22905 13.8004C7.00413 13.9409 6.84426 14.165 6.78459 14.4235C6.72493 14.6819 6.77037 14.9534 6.91092 15.1783C7.05146 15.4032 7.27559 15.5631 7.53401 15.6228C7.79243 15.6824 8.06397 15.637 8.28888 15.4964L14.7256 11.4744L13.6704 16.0132C13.6402 16.1417 13.6357 16.2749 13.6573 16.4051C13.6788 16.5354 13.7259 16.6601 13.7958 16.772C13.8658 16.884 13.9572 16.981 14.0649 17.0574C14.1725 17.1339 14.2942 17.1882 14.4229 17.2174C14.5514 17.2476 14.6847 17.2521 14.8149 17.2306C14.9451 17.2091 15.0698 17.162 15.1818 17.092C15.2937 17.0221 15.3907 16.9306 15.4672 16.823C15.5436 16.7154 15.598 16.5937 15.6272 16.4649L17.2178 9.57508C17.2446 9.44618 17.2457 9.31326 17.221 9.18394C17.1768 8.92447 17.0321 8.69289 16.8183 8.53942Z"
                 fill="white" />
             </svg>
-          </button>
+          </a>
         </div>
       </section>
 
@@ -708,14 +728,14 @@
               absolute comfort.
             </p>
 
-            <button class="button we-provide-statement__button">
+            <a href="/" class="button we-provide-statement__button">
               Explore More
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M16.8183 8.53942C16.7129 8.46055 16.5929 8.40326 16.4653 8.37085L9.57548 6.78021C9.447 6.75055 9.31394 6.74648 9.18389 6.76824C9.05384 6.79001 8.92934 6.83717 8.81752 6.90705C8.59168 7.04817 8.43116 7.27322 8.37125 7.53269C8.34159 7.66117 8.33752 7.79424 8.35929 7.92429C8.38105 8.05434 8.42822 8.17883 8.49809 8.29065C8.63921 8.51649 8.86426 8.67702 9.12374 8.73692L13.6657 9.77827L7.22905 13.8004C7.00413 13.9409 6.84426 14.165 6.78459 14.4235C6.72493 14.6819 6.77037 14.9534 6.91092 15.1783C7.05146 15.4032 7.27559 15.5631 7.53401 15.6228C7.79243 15.6824 8.06397 15.637 8.28888 15.4964L14.7256 11.4744L13.6704 16.0132C13.6402 16.1417 13.6357 16.2749 13.6573 16.4051C13.6788 16.5354 13.7259 16.6601 13.7958 16.772C13.8658 16.884 13.9572 16.981 14.0649 17.0574C14.1725 17.1339 14.2942 17.1882 14.4229 17.2174C14.5514 17.2476 14.6847 17.2521 14.8149 17.2306C14.9451 17.2091 15.0698 17.162 15.1818 17.092C15.2937 17.0221 15.3907 16.9306 15.4672 16.823C15.5436 16.7154 15.598 16.5937 15.6272 16.4649L17.2178 9.57508C17.2446 9.44618 17.2457 9.31326 17.221 9.18394C17.1768 8.92447 17.0321 8.69289 16.8183 8.53942Z"
                   fill="white" />
               </svg>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -727,7 +747,7 @@
           </h2>
           <ul class="styles__list">
             <li class="styles__item">
-              <button class="styles__button">
+              <a href="/" class="styles__button">
                 <h3 class="styles__label">NIKE Mercurial Superfly</h3>
                 <span class="red styles__price">$271</span>
                 <picture>
@@ -741,11 +761,11 @@
                     height="160"
                     loading="lazy" />
                 </picture>
-              </button>
+              </a>
             </li>
 
             <li class="styles__item">
-              <button class="styles__button">
+              <a href="/" class="styles__button">
                 <h3 class="styles__label">NIKE Air Zoom Alphafly</h3>
                 <span class="red styles__price">$216</span>
                 <picture>
@@ -759,11 +779,11 @@
                     height="160"
                     loading="lazy" />
                 </picture>
-              </button>
+              </a>
             </li>
 
             <li class="styles__item">
-              <button class="styles__button">
+              <a href="/" class="styles__button">
                 <h3 class="styles__label">NIKE Dunk High</h3>
                 <span class="red styles__price styles__label">$187</span>
                 <picture>
@@ -777,7 +797,7 @@
                     height="160"
                     loading="lazy" />
                 </picture>
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -964,14 +984,14 @@
               absolute comfort.
             </p>
 
-            <button class="button button--small best__button">
+            <a href="/" class="button button--small best__button">
               Explore More
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M16.8183 8.53942C16.7129 8.46055 16.5929 8.40326 16.4653 8.37085L9.57548 6.78021C9.447 6.75055 9.31394 6.74648 9.18389 6.76824C9.05384 6.79001 8.92934 6.83717 8.81752 6.90705C8.59168 7.04817 8.43116 7.27322 8.37125 7.53269C8.34159 7.66117 8.33752 7.79424 8.35929 7.92429C8.38105 8.05434 8.42822 8.17883 8.49809 8.29065C8.63921 8.51649 8.86426 8.67702 9.12374 8.73692L13.6657 9.77827L7.22905 13.8004C7.00413 13.9409 6.84426 14.165 6.78459 14.4235C6.72493 14.6819 6.77037 14.9534 6.91092 15.1783C7.05146 15.4032 7.27559 15.5631 7.53401 15.6228C7.79243 15.6824 8.06397 15.637 8.28888 15.4964L14.7256 11.4744L13.6704 16.0132C13.6402 16.1417 13.6357 16.2749 13.6573 16.4051C13.6788 16.5354 13.7259 16.6601 13.7958 16.772C13.8658 16.884 13.9572 16.981 14.0649 17.0574C14.1725 17.1339 14.2942 17.1882 14.4229 17.2174C14.5514 17.2476 14.6847 17.2521 14.8149 17.2306C14.9451 17.2091 15.0698 17.162 15.1818 17.092C15.2937 17.0221 15.3907 16.9306 15.4672 16.823C15.5436 16.7154 15.598 16.5937 15.6272 16.4649L17.2178 9.57508C17.2446 9.44618 17.2457 9.31326 17.221 9.18394C17.1768 8.92447 17.0321 8.69289 16.8183 8.53942Z"
                   fill="white" />
               </svg>
-            </button>
+            </a>
           </div>
           <div class="best__picture-wrapper">
             <div class="best__blob"></div>
@@ -1052,14 +1072,14 @@
               </li>
             </ul>
 
-            <button class="button button--small vision__button">
+            <a href="/" class="button button--small vision__button">
               Customization Available
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M16.8183 8.53942C16.7129 8.46055 16.5929 8.40326 16.4653 8.37085L9.57548 6.78021C9.447 6.75055 9.31394 6.74648 9.18389 6.76824C9.05384 6.79001 8.92934 6.83717 8.81752 6.90705C8.59168 7.04817 8.43116 7.27322 8.37125 7.53269C8.34159 7.66117 8.33752 7.79424 8.35929 7.92429C8.38105 8.05434 8.42822 8.17883 8.49809 8.29065C8.63921 8.51649 8.86426 8.67702 9.12374 8.73692L13.6657 9.77827L7.22905 13.8004C7.00413 13.9409 6.84426 14.165 6.78459 14.4235C6.72493 14.6819 6.77037 14.9534 6.91092 15.1783C7.05146 15.4032 7.27559 15.5631 7.53401 15.6228C7.79243 15.6824 8.06397 15.637 8.28888 15.4964L14.7256 11.4744L13.6704 16.0132C13.6402 16.1417 13.6357 16.2749 13.6573 16.4051C13.6788 16.5354 13.7259 16.6601 13.7958 16.772C13.8658 16.884 13.9572 16.981 14.0649 17.0574C14.1725 17.1339 14.2942 17.1882 14.4229 17.2174C14.5514 17.2476 14.6847 17.2521 14.8149 17.2306C14.9451 17.2091 15.0698 17.162 15.1818 17.092C15.2937 17.0221 15.3907 16.9306 15.4672 16.823C15.5436 16.7154 15.598 16.5937 15.6272 16.4649L17.2178 9.57508C17.2446 9.44618 17.2457 9.31326 17.221 9.18394C17.1768 8.92447 17.0321 8.69289 16.8183 8.53942Z"
                   fill="white" />
               </svg>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -1070,14 +1090,14 @@
             <h2 class="section__header join__header">JOIN OUR NIKECLUB & GET 15% OFF</h2>
             <p class="join__paragraph">Sign up for free. Join the community, Never pay for shipping.</p>
 
-            <button class="button button--small join__button">
+            <a href="/" class="button button--small join__button">
               Join Us
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M16.8183 8.53942C16.7129 8.46055 16.5929 8.40326 16.4653 8.37085L9.57548 6.78021C9.447 6.75055 9.31394 6.74648 9.18389 6.76824C9.05384 6.79001 8.92934 6.83717 8.81752 6.90705C8.59168 7.04817 8.43116 7.27322 8.37125 7.53269C8.34159 7.66117 8.33752 7.79424 8.35929 7.92429C8.38105 8.05434 8.42822 8.17883 8.49809 8.29065C8.63921 8.51649 8.86426 8.67702 9.12374 8.73692L13.6657 9.77827L7.22905 13.8004C7.00413 13.9409 6.84426 14.165 6.78459 14.4235C6.72493 14.6819 6.77037 14.9534 6.91092 15.1783C7.05146 15.4032 7.27559 15.5631 7.53401 15.6228C7.79243 15.6824 8.06397 15.637 8.28888 15.4964L14.7256 11.4744L13.6704 16.0132C13.6402 16.1417 13.6357 16.2749 13.6573 16.4051C13.6788 16.5354 13.7259 16.6601 13.7958 16.772C13.8658 16.884 13.9572 16.981 14.0649 17.0574C14.1725 17.1339 14.2942 17.1882 14.4229 17.2174C14.5514 17.2476 14.6847 17.2521 14.8149 17.2306C14.9451 17.2091 15.0698 17.162 15.1818 17.092C15.2937 17.0221 15.3907 16.9306 15.4672 16.823C15.5436 16.7154 15.598 16.5937 15.6272 16.4649L17.2178 9.57508C17.2446 9.44618 17.2457 9.31326 17.221 9.18394C17.1768 8.92447 17.0321 8.69289 16.8183 8.53942Z"
                   fill="white" />
               </svg>
-            </button>
+            </a>
           </div>
           <svg
             class="join__logo"
@@ -1169,7 +1189,7 @@
           <div class="section__body subscribe">
             <h2 class="section__header subscribe__header">Let’s Stay In Touch</h2>
             <form action="" class="subscribe__form">
-              <!-- <label for="newsletter-email" class="visually-hidden">Enter your e-mail</label> -->
+              <label for="newsletter-email" class="visually-hidden">Enter your e-mail</label>
               <div class="input">
                 <input
                   class="input__field"
@@ -1178,7 +1198,7 @@
                   name="email"
                   placeholder="Enter Email..."
                   required />
-                <button class="button button--submit input__button">Subscirbe</button>
+                <button type="submit" class="button button--submit input__button">Subscirbe</button>
               </div>
             </form>
           </div>
@@ -1283,7 +1303,7 @@
       <section class="container__inner">
         <div class="section__body footer__extra">
           <div class="footer__rights-wrapper">
-            <span class="footer__rights-statement">2022 Nike, Inc. All Rights Reserved </span>
+            <span class="footer__rights-statement">2022 Nike, Inc. All Rights Reserved ©</span>
           </div>
           <ul class="footer__soc1als-list">
             <li class="footer__soc1als-item">

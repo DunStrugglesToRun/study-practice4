@@ -70,6 +70,10 @@
       align-items: center;
       padding-inline: 30px
     }
+
+    @include tablet {
+      row-gap: 30px;
+    }
   }
   
   &__colors {
@@ -181,6 +185,10 @@
       margin-right: 0;
     }
 
+    @include mobile {
+      padding-top: 0;
+    }
+
     &-lacing {
       top: 40%; 
       left: 39%;
@@ -237,6 +245,19 @@
     @include tablet {
       align-items: stretch;
       row-gap: 20px;
+    }
+
+    @include mobile {
+      display: contents;
+    }
+
+    &__header {
+      order: -1;
+
+      @include mobile {
+        margin-top: 4vw;
+        font-size: 7vw;
+      }
     }
   }
 

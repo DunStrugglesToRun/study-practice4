@@ -33,16 +33,19 @@
   }
 
   &__group {
+    --headerFontSize: 24px;
+    --linkFontSize: 20px;
+
     &__header {
       font-weight: 950;
       font-style: italic;
       margin-bottom: 11px;
-      font-size: 24px;
+      font-size: var(--headerFontSize);
       white-space: nowrap
     }
 
     &__link {
-      font-size: 20px;
+      font-size: var(--linkFontSize);
       font-family: 'Futura LT';
       font-weight: 300;
       width: 100%;
@@ -55,5 +58,14 @@
         background-color: var(--color-accent);
       }
     }
+
+    @include tablet {
+      --headerFontSize: 30px;
+      --linkFontSize: 26px;
+    }
+  }
+
+  @include tablet {
+    padding-block: 80px;
   }
 }
