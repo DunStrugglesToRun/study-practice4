@@ -63,9 +63,18 @@
       --headerFontSize: 30px;
       --linkFontSize: 26px;
     }
+    
+    @include mobile-s {
+      --headerFontSize: 7vw;
+      --linkFontSize: 5.8vw;
+    }
   }
 
   @include tablet {
     padding-block: 80px;
+  }
+
+  @include mobile-s { 
+    padding-block: 30px;
   }
 }

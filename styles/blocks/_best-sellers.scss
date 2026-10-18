@@ -53,6 +53,10 @@
         aspect-ratio: 1.4;
       }
 
+      @include mobile-s {
+        width: 280px;
+      }
+
       @include hover {
         --opacityBefore: 1;
       }

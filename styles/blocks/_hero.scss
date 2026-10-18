@@ -99,6 +99,10 @@
       column-gap: 3%;
       order: 1;
     }
+
+    @include mobile-s {
+      column-gap: 1%;
+    }
   
     
     &-item {
@@ -133,6 +137,11 @@
       @include tablet {
         --buttonWidthTransformScale: 2.5;
         --buttonBoxShadow: inset 0 0 0 2px var(--color-light);
+      }
+
+      @include mobile-s {
+        width: 11vw;
+        --buttonWidthTransformScale: 2;
       }
       
       &-visual {
@@ -284,6 +293,10 @@
 
     &__price {
       margin-right: clamp(20%, 10vw, 70%);
+    
+      @include mobile-s {
+        margin-right: 0;
+      }
     }
 
     &__size {

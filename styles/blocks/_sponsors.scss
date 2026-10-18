@@ -7,9 +7,18 @@
   column-gap: 30px;
   padding-block: 10px;
   overflow: scroll;
+
+  @include mobile-s {
+    padding-block: 0;
+    column-gap: 20px;
+  }
   
   & svg {
     flex-shrink: 0;
+
+    @include mobile-s {
+      height: 50px;
+    }
   }
 }
 

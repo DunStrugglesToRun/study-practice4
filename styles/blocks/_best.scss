@@ -14,6 +14,9 @@
     padding-inline: 0;
     padding-block: 50px;
   }
+  @include mobile-s {
+    padding-block: 0;
+  }
 
   &__contents {
     display: flex;

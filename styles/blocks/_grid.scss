@@ -35,5 +35,9 @@
     @include tablet {
       --gridColumns: 2;
     }
+
+    @include mobile-s {
+      --gridColumns: 1;
+    }
   }
 }

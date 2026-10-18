@@ -27,9 +27,17 @@ h1, h2, h3, h4 {
 
 h1, .h1 {
   @include fluid-text(64, 44);
+
+  @include mobile-s {
+    font-size: 33px;
+  }
 }
 h2, .h2 {
   @include fluid-text(48, 36);
+
+    @include mobile-s {
+      font-size: 28px;
+    }
 }
 h3, .h3 {
   @include fluid-text(32, 28);
@@ -75,4 +83,8 @@ h4, .h4 {
   font-size: 24px;
   font-family: 'Futura LT', sans-serif; 
   white-space: nowrap;
+
+  @include mobile-s {
+    font-size: 20px;
+  }
 }

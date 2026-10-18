@@ -41,4 +41,9 @@
     --section-padding-y: 30px;
     --container-padding-x: 30px;
   }
+
+  @include mobile-s {
+    --section-padding-y: 20px;
+    --container-padding-x: 20px;
+  }
 } 

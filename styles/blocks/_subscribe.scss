@@ -4,13 +4,21 @@
 
   &__form {
     margin-block: 40px 88px;
+
+    @include mobile-s {
+      margin-bottom: 40px;
+    }
   }
 
   &::after {
     content: '';
     width: 240px;
-    height: 125px;
+    aspect-ratio: 1.92;
     background: url('../images/icons/footer/subscribe__logo.svg') center / contain no-repeat;
+
+    @include mobile-s {
+      width: 180px;
+    }
   }
 
   @include tablet {

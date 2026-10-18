@@ -48,5 +48,9 @@
     @include tablet {
       margin-top: 80px;
     }
+
+    @include mobile-s {
+      margin-top: 40px;
+    }
   }
 }

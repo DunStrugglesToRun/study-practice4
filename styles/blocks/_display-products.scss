@@ -24,13 +24,15 @@
     align-items: center;
   }
 
+  @include mobile-s {
+    width: 85%;
+    row-gap: 15px;
+  }
+
   @for $i from 1 through 6 {
     > *:nth-child(#{$i}) {
       grid-area: item#{$i};
     }
-  }
-
-  &__item {
   }
 
   &__button {

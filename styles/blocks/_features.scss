@@ -9,11 +9,21 @@
     column-gap: 16px;
 
     @include tablet {
-      &:nth-child(3),
       &:nth-child(4) {
         justify-self: end;
       }
       
+      &:nth-child(3) {
+        @include mobile-s-above {
+          justify-self: end;
+        }
+      }
+    }
+
+    @include mobile-s {
+      &:nth-child(2) {
+        justify-self: end;
+      }
     }
 
 
@@ -21,6 +31,10 @@
       display: flex;
       flex-direction: column;
       row-gap: 11px;
+
+      @include mobile-s {
+        row-gap: 4px;
+      }
     }
 
     &-header {
@@ -34,5 +48,8 @@
     }
   }
 
-
+  @include mobile-s {
+    height: 230px;
+    row-gap: 20px;
+  }
 }
