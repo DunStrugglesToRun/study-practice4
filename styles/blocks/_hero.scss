@@ -10,7 +10,7 @@
     height: 384px;
     top: 60px;
     left: 30px;
-    background: url('/images/patterns/hero-bg-text.svg') top/contain no-repeat;
+    background: url('../images/patterns/hero-bg-text.svg') top/contain no-repeat;
     z-index: -100;
   }
 
@@ -21,7 +21,7 @@
     width: 100vw;
     height: 705px;
     top: -90px;
-    background: url('/images/patterns/hero-bg.svg') top/contain no-repeat;
+    background: url('../images/patterns/hero-bg.svg') top/contain no-repeat;
     z-index: -100;
 
     @include desktop {
@@ -55,7 +55,7 @@
       translate: -50%;
       bottom: -108px;
       left: 50%;
-      background: url('/images/banner/Labels.svg') center no-repeat;
+      background: url('../images/banner/Labels.svg') center no-repeat;
       pointer-events: none;
     }
   }
@@ -81,7 +81,7 @@
     width: 138px;
     height: 480px;
     list-style: none;
-    background: url('/images/patterns/colors-curve.svg') center/contain no-repeat;
+    background: url('../images/patterns/colors-curve.svg') center/contain no-repeat;
 
     @include tablet {
       width: 0;
@@ -310,7 +310,7 @@
           width: 32px;
           height: 32px;
           rotate: var(--sizeDropdownRotate);
-          background: url('/images/icons/arrow-drop-down.svg') top/contain no-repeat;
+          background: url('../images/icons/arrow-drop-down.svg') top/contain no-repeat;
         }
       }
 

@@ -203,28 +203,28 @@ svg * {
 }
 @font-face {
   font-family: "Futura BT";
-  src: url("/fonts/Futura Bk BT Book.woff2") format("woff2");
+  src: url("../fonts/Futura-Bk-BT-Book.woff2") format("woff2");
   font-weight: 350;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Futura BT";
-  src: url("/fonts/FuturaExtraBlackCondensedItalicBT.woff2") format("woff2");
+  src: url("../fonts/FuturaExtraBlackCondensedItalicBT.woff2") format("woff2");
   font-weight: 950;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Futura LT";
-  src: url("/fonts/FuturaLT-CondensedLight.woff2") format("woff2");
+  src: url("../fonts/FuturaLT-CondensedLight.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Futura BT";
-  src: url("/fonts/FuturaMediumBT.woff2") format("woff2");
+  src: url("../fonts/FuturaMediumBT.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -459,7 +459,7 @@ h4, .h4 {
   border-radius: 50%;
   translate: -50% -50%;
   box-shadow: 0px 0px 4px 0px rgb(0, 0, 0);
-  background: var(--color-light) url("/images/icons/plus.svg") center no-repeat;
+  background: var(--color-light) url("../images/icons/plus.svg") center no-repeat;
 }
 @media (hover: hover) {
   .button-inspect:hover {
@@ -608,6 +608,7 @@ h4, .h4 {
   border: 1px solid var(--color-light);
   border-radius: var(--border-radius-input);
   padding-inline: 15px 161px;
+  padding-block: 0;
   text-align: center;
   color: var(--color-light);
   background-color: transparent;
@@ -770,7 +771,7 @@ h4, .h4 {
   height: 384px;
   top: 60px;
   left: 30px;
-  background: url("/images/patterns/hero-bg-text.svg") top/contain no-repeat;
+  background: url("../images/patterns/hero-bg-text.svg") top/contain no-repeat;
   z-index: -100;
 }
 .hero::after {
@@ -780,7 +781,7 @@ h4, .h4 {
   width: 100vw;
   height: 705px;
   top: -90px;
-  background: url("/images/patterns/hero-bg.svg") top/contain no-repeat;
+  background: url("../images/patterns/hero-bg.svg") top/contain no-repeat;
   z-index: -100;
 }
 @media (max-width: 1280px) {
@@ -817,7 +818,7 @@ h4, .h4 {
   translate: -50%;
   bottom: -108px;
   left: 50%;
-  background: url("/images/banner/Labels.svg") center no-repeat;
+  background: url("../images/banner/Labels.svg") center no-repeat;
   pointer-events: none;
 }
 .hero__offer-current {
@@ -843,7 +844,7 @@ h4, .h4 {
   width: 138px;
   height: 480px;
   list-style: none;
-  background: url("/images/patterns/colors-curve.svg") center/contain no-repeat;
+  background: url("../images/patterns/colors-curve.svg") center/contain no-repeat;
 }
 @media (max-width: 1023px) {
   .hero__colors {
@@ -1088,7 +1089,7 @@ h4, .h4 {
   width: 32px;
   height: 32px;
   rotate: var(--sizeDropdownRotate);
-  background: url("/images/icons/arrow-drop-down.svg") top/contain no-repeat;
+  background: url("../images/icons/arrow-drop-down.svg") top/contain no-repeat;
 }
 .hero__add-to-shopbag__size-list {
   position: absolute;
@@ -1471,7 +1472,6 @@ h4, .h4 {
 .sports-time__header {
   display: flex;
   flex-direction: column;
-  row-gap: -0.4em;
   font-weight: 950;
   font-style: italic;
   transform: rotate(-11deg);
@@ -1482,7 +1482,7 @@ h4, .h4 {
 .sports-time__header__pattern-white {
   display: inline-block;
   margin-bottom: -0.38em;
-  background-image: url("/images/sports-time/text-bg1.svg");
+  background-image: url("../images/sports-time/text-bg1.svg");
   background-color: var(--color-light);
   background-position: -0.7em -0.49em;
   background-repeat: no-repeat;
@@ -1575,7 +1575,7 @@ h4, .h4 {
   content: "";
   width: 100%;
   aspect-ratio: 6.5;
-  background: url("/images/sports-time/desk.png") no-repeat center/contain;
+  background: url("../images/sports-time/desk.png") no-repeat center/contain;
 }
 @media (max-width: 1023px) {
   .display-products__button {

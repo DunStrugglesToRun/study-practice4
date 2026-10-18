@@ -15,7 +15,6 @@
   &__header {
     display: flex;
     flex-direction: column;
-    row-gap: -0.4em;
     font-weight: 950;
     font-style: italic;
     transform: rotate(-11deg);
@@ -28,7 +27,7 @@
       display: inline-block;
       margin-bottom: -0.38em;
       background-image: 
-      url('/images/sports-time/text-bg1.svg');
+      url('../images/sports-time/text-bg1.svg');
       background-color: var(--color-light);
       background-position: -0.7em -0.49em;
       background-repeat: no-repeat;
