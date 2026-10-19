@@ -51,12 +51,18 @@
       position: absolute;
       content: '';
       width: 1588px;
-      height: 157px;
+      aspect-ratio: 10;
       translate: -50%;
       bottom: -108px;
       left: 50%;
       background: url('../images/banner/Labels.svg') center no-repeat;
       pointer-events: none;
+
+      @include desktop {
+        translate: none;
+        left: -50px;
+        bottom: -120px;
+      }
     }
   }
 
@@ -171,9 +177,17 @@
     display: flex;
     column-gap: var(--offerCurrentColumnGap);
 
+    @include  desktop {
+      @include tablet-above {
+        padding-right: 10vw;
+        column-gap: 10vw;
+      }
+    }
+
     @include tablet {
       @include mobile-above {
         padding-left: 90px;
+        column-gap: 10vw;
       }
     }
 
@@ -329,6 +343,9 @@
 
       &-list {
         position: absolute;
+        background-color: var(--color-dark);
+        border: 1px solid var(--color-light);
+        border-radius: var(--border-radius);
       }
 
       &-select {
@@ -336,6 +353,8 @@
 
         color: var(--color-ligth);
         border-radius: var(--border-radius);
+
+        padding: 3px;
 
         @include hover {
           background-color: var(--color-accent);

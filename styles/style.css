@@ -840,12 +840,19 @@ h4, .h4 {
   position: absolute;
   content: "";
   width: 1588px;
-  height: 157px;
+  aspect-ratio: 10;
   translate: -50%;
   bottom: -108px;
   left: 50%;
   background: url("../images/banner/Labels.svg") center no-repeat;
   pointer-events: none;
+}
+@media (max-width: 1280px) {
+  .hero__body::after {
+    translate: none;
+    left: -50px;
+    bottom: -120px;
+  }
 }
 .hero__offer-current {
   display: flex;
@@ -971,9 +978,18 @@ h4, .h4 {
   -moz-column-gap: var(--offerCurrentColumnGap);
        column-gap: var(--offerCurrentColumnGap);
 }
+@media (max-width: 1280px) and (min-width: 1024px) {
+  .hero__preview-wrapper {
+    padding-right: 10vw;
+    -moz-column-gap: 10vw;
+         column-gap: 10vw;
+  }
+}
 @media (max-width: 1023px) and (min-width: 768px) {
   .hero__preview-wrapper {
     padding-left: 90px;
+    -moz-column-gap: 10vw;
+         column-gap: 10vw;
   }
 }
 @media (max-width: 767px) {
@@ -1136,6 +1152,9 @@ h4, .h4 {
 }
 .hero__add-to-shopbag__size-list {
   position: absolute;
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-light);
+  border-radius: var(--border-radius);
 }
 .hero__add-to-shopbag__size-select {
   padding: 0;
@@ -1143,6 +1162,7 @@ h4, .h4 {
   border: none;
   color: var(--color-ligth);
   border-radius: var(--border-radius);
+  padding: 3px;
 }
 @media (hover: hover) {
   .hero__add-to-shopbag__size-select:hover {
@@ -2199,6 +2219,11 @@ h4, .h4 {
        column-gap: 40px;
   height: 70px;
   flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .footer__extra {
+    height: 90px;
+  }
 }
 .footer__rights-statement {
   font-size: 16px;
