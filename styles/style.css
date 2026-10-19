@@ -1847,16 +1847,31 @@ h4, .h4 {
     --imageOffsetRight: 50px;
   }
 }
+@media (hover: hover) and (min-width: 768px) and (max-width: 1023px) {
+  .styles__button:hover {
+    --labelFontSize: 17px;
+  }
+}
 @media (hover: none) {
   .styles__button:active {
     --labelFontSize: 25px;
     --imageOffsetRight: 50px;
   }
 }
+@media (hover: none) and (min-width: 768px) and (max-width: 1023px) {
+  .styles__button:active {
+    --labelFontSize: 17px;
+  }
+}
 @media (max-width: 1023px) {
   .styles__button {
     --beforeOffsetTop: 40%;
     --beforeBlur: 60px;
+  }
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  .styles__button {
+    --labelFontSize: 15px ;
   }
 }
 @media (max-width: 767px) {

@@ -91,12 +91,22 @@
     @include hover {
       --labelFontSize: 25px;
       --imageOffsetRight: 50px;
+      
+      @include mobile-above {
+        @include tablet {
+          --labelFontSize: 17px;
+        }
+      }
     }
 
     
     @include tablet {
       --beforeOffsetTop: 40%;
       --beforeBlur: 60px;
+
+      @include mobile-above {
+        --labelFontSize: 15px
+      }
     }
     
     @include mobile {
