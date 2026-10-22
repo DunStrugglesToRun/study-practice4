@@ -1959,20 +1959,22 @@ h4, .h4 {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 @media (max-width: 1280px) {
   .sponsors__track__group {
-    --rowGap: 50px;
+    --columnGap: 50px;
     flex-shrink: 0;
     width: 50%;
-    row-gap: var(--rowGap);
-    padding-right: var(--rowGap);
+    -moz-column-gap: var(--columnGap);
+         column-gap: var(--columnGap);
+    padding-right: var(--columnGap);
   }
 }
 @media (max-width: 480px) {
   .sponsors__track__group {
-    --rowGap: 30px;
+    --columnGap: 30px;
   }
 }
 .sponsors__track__group img {

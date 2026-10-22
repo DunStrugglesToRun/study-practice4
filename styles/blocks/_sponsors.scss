@@ -24,19 +24,19 @@
       display: flex;
       justify-content: space-around;
       width: 100%;
-      gap: 30px;
+      column-gap: 30px;
 
       @include desktop {
-        --rowGap: 50px;
+        --columnGap: 50px;
         
         flex-shrink: 0;
         width: 50%;
-        row-gap: var(--rowGap);
-        padding-right: var(--rowGap);
+        column-gap: var(--columnGap);
+        padding-right: var(--columnGap); 
       }
 
       @include mobile-s {
-        --rowGap: 30px;
+        --columnGap: 30px;
       }
 
       & img {
