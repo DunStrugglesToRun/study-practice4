@@ -1,23 +1,88 @@
 .sponsors {
-@include no-scrollbar;
+  @include no-scrollbar;
   
+  overflow: hidden;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  column-gap: 30px;
+  width: 100%;
   padding-block: 10px;
-  overflow: scroll;
+
+  &__track {
+    display: flex;
+    width: 100%;
+    
+    @include desktop {
+      flex-shrink: 0;
+      width: max-content ;
+      animation: scroll-left 20s linear infinite;
+
+      @include hover {
+        animation-play-state: paused;
+      }
+    }
+
+    &__group {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      gap: 30px;
+
+      @include desktop {
+        --rowGap: 50px;
+        
+        flex-shrink: 0;
+        width: 50%;
+        row-gap: var(--rowGap);
+        padding-right: var(--rowGap);
+      }
+
+      @include mobile-s {
+        --rowGap: 30px;
+      }
+
+      & img {
+        width: 100px;
+
+        @include mobile-s {
+          width: 70px;
+        }
+      }
+
+      &__repeat {
+        display: none;
+
+        @include desktop {
+          display: flex;
+        }
+      }
+    }
+  }
+
 
   @include mobile-s {
     padding-block: 0;
-    column-gap: 20px;
   }
-  
-  & svg {
-    flex-shrink: 0;
 
-    @include mobile-s {
-      height: 50px;
+  @include desktop {
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      
+      100% {
+        transform: translateX(-1200px);
+      }
+    }
+  }
+
+  @include mobile-s {
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-800px);
+      }
     }
   }
 }

@@ -10,11 +10,15 @@
     }
   }
 
-  &::after {
-    content: '';
+  &__footer-main-page-link {
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__image {
     width: 240px;
     aspect-ratio: 1.92;
-    background: url('../images/icons/footer/subscribe__logo.svg') center / contain no-repeat;
 
     @include mobile-s {
       width: 180px;
